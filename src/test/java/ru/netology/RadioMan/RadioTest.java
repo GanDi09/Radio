@@ -7,7 +7,7 @@ public class RadioTest {
 
     @Test
     public void shouldNumberStation() {
-       Radio rad = new Radio();
+        Radio rad = new Radio();
 
         rad.setNumberStation(8);
 
@@ -16,6 +16,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expexted, actual);
     }
+
     @Test
     public void shouldNumberLessZero() {
         Radio rad = new Radio();
@@ -39,8 +40,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expexted, actual);
     }
+
     @Test
-    public  void shouldNextStation() {
+    public void shouldNextStation() {
         Radio rad = new Radio();
         rad.setNumberStation(5);
 
@@ -51,8 +53,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public  void shouldNextStationMoreMax() {
+    public void shouldNextStationMoreMax() {
         Radio rad = new Radio();
         rad.setNumberStation(9);
         rad.nextStation();
@@ -64,7 +67,7 @@ public class RadioTest {
     }
 
     @Test
-    public  void shouldPrevStation() {
+    public void shouldPrevStation() {
         Radio rad = new Radio();
         rad.setNumberStation(1);
         rad.prevStation();
@@ -74,8 +77,9 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
-    public  void shouldPrevStationLessZero() {
+    public void shouldPrevStationLessZero() {
         Radio rad = new Radio();
         rad.setNumberStation(0);
         rad.prevStation();
@@ -97,6 +101,7 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
 
     }
+
     @Test
     public void shouldVolumeLessZero() {
         Radio rad = new Radio();
@@ -121,6 +126,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseVolume() {
         Radio rad = new Radio();
@@ -133,6 +139,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldIncreaseVolumeMoreMax() {
         Radio rad = new Radio();
@@ -157,6 +164,7 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldReduceVolumeLessZero() {
         Radio rad = new Radio();

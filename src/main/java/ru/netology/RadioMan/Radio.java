@@ -1,8 +1,8 @@
 package ru.netology.RadioMan;
 
 public class Radio {
-       private int numberStation;
-       private int currentVolume;
+    private int numberStation;
+    private int currentVolume;
 
     public int getNumberStation() {
         return numberStation;
@@ -17,20 +17,21 @@ public class Radio {
         }
         this.numberStation = numberStation;
     }
+
     public void nextStation() {
         if (numberStation < 9) {
-            numberStation ++;
+            numberStation++;
+        } else {
+            numberStation = 0;
         }
-        else {
-            numberStation = 0; }
 
 
     }
+
     public void prevStation() {
         if (numberStation > 0) {
-            numberStation --;
-        }
-        else {
+            numberStation--;
+        } else {
             numberStation = 9;
         }
 
@@ -44,17 +45,19 @@ public class Radio {
         if (currentVolume < 0) {
             return;
         }
-        if (currentVolume > 10){
+        if (currentVolume > 10) {
             return;
         }
 
         this.currentVolume = currentVolume;
     }
+
     public void increaseVolume() {
         if (currentVolume < 10) {
             currentVolume = currentVolume + 1;
         }
     }
+
     public void reduceVolume() {
         if (currentVolume > 0) {
             currentVolume = currentVolume - 1;
