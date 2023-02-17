@@ -44,11 +44,11 @@ public class RadioTest {
     @Test
     public void shouldNextStation() {
         Radio rad = new Radio(15);
-        rad.setNumberStation(14);
+        rad.setNumberStation(13);
 
         rad.nextStation();
 
-        int expected = 0;
+        int expected = 14;
         int actual = rad.getNumberStation();
 
         Assertions.assertEquals(expected, actual);
@@ -56,8 +56,8 @@ public class RadioTest {
 
     @Test
     public void shouldNextStationMoreMax() {
-        Radio rad = new Radio(20);
-        rad.setNumberStation(19);
+        Radio rad = new Radio();
+        rad.setNumberStation(9);
         rad.nextStation();
 
         int expected = 0;
